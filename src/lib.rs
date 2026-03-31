@@ -44,6 +44,11 @@ use std::ffi::{NulError, c_void};
 mod jpegxr_sys;
 use jpegxr_sys::*;
 
+#[cfg(feature = "image")]
+pub mod image_hook;
+#[cfg(feature = "image")]
+pub use image_hook::register_decoding_hook;
+
 // For wrapping errors conveniently
 use thiserror::Error;
 
