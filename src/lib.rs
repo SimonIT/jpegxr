@@ -45,9 +45,9 @@ mod jpegxr_sys;
 use jpegxr_sys::*;
 
 #[cfg(feature = "image")]
-pub mod image_hook;
+pub mod image;
 #[cfg(feature = "image")]
-pub use image_hook::register_decoding_hook;
+pub use image::register_decoding_hook;
 
 // For wrapping errors conveniently
 use thiserror::Error;
